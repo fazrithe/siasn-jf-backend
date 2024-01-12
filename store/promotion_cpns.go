@@ -5,15 +5,14 @@ import (
 	"database/sql"
 	"errors"
 	"fmt"
-	"path"
-
-	"github.com/fazrithe/siasn-jf-backend/ec"
-	. "github.com/fazrithe/siasn-jf-backend/errnum"
-	"github.com/fazrithe/siasn-jf-backend/metricutil"
-	"github.com/fazrithe/siasn-jf-backend/search"
-	"github.com/fazrithe/siasn-jf-backend/store/models"
-	"github.com/fazrithe/siasn-jf-backend/store/object"
 	"github.com/google/uuid"
+	. "github.com/if-itb/siasn-jf-backend/errnum"
+	"github.com/if-itb/siasn-jf-backend/store/models"
+	"github.com/if-itb/siasn-jf-backend/store/object"
+	"github.com/if-itb/siasn-libs-backend/ec"
+	"github.com/if-itb/siasn-libs-backend/metricutil"
+	"github.com/if-itb/siasn-libs-backend/search"
+	"path"
 )
 
 // getPromotionCpnsCtx returns the status of a CPNS promotion admission.

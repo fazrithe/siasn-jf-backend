@@ -10,7 +10,7 @@ import (
 	"net/textproto"
 	"os"
 
-	"github.com/fazrithe/siasn-jf-backend/httputil"
+	"github.com/if-itb/siasn-libs-backend/httputil"
 )
 
 // HandleActivityAdmissionSubmit handles a new admission request.

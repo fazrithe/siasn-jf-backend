@@ -5,18 +5,17 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
+	"github.com/DATA-DOG/go-sqlmock"
+	"github.com/google/uuid"
+	"github.com/if-itb/siasn-jf-backend/store"
+	"github.com/if-itb/siasn-jf-backend/store/models"
+	"github.com/if-itb/siasn-libs-backend/auth"
+	"github.com/lib/pq"
+	. "github.com/onsi/gomega"
 	"net/http"
 	"net/http/httptest"
 	"testing"
 	"time"
-
-	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/fazrithe/siasn-jf-backend/auth"
-	"github.com/fazrithe/siasn-jf-backend/store"
-	"github.com/fazrithe/siasn-jf-backend/store/models"
-	"github.com/google/uuid"
-	"github.com/lib/pq"
-	. "github.com/onsi/gomega"
 )
 
 func TestHandleDismissalAdmissionSubmit(t *testing.T) {

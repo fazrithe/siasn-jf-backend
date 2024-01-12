@@ -3,39 +3,35 @@ package main
 import (
 	"context"
 	"database/sql"
-	"os"
-	"os/signal"
-	"syscall"
-	"time"
-
 	"github.com/EMCECS/ecs-object-client-go"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/s3"
-	"github.com/fazrithe/siasn-jf-backend/auth"
-	"github.com/fazrithe/siasn-jf-backend/breaker"
-	"github.com/fazrithe/siasn-jf-backend/config"
-	"github.com/fazrithe/siasn-jf-backend/docx"
-	"github.com/fazrithe/siasn-jf-backend/httputil"
-	"github.com/fazrithe/siasn-jf-backend/logutil"
-	"github.com/fazrithe/siasn-jf-backend/metricutil"
-	"github.com/fazrithe/siasn-jf-backend/store"
-	"github.com/fazrithe/siasn-jf-backend/store/object"
 	"github.com/go-redis/cache/v8"
 	"github.com/go-redis/redis/v8"
+	"github.com/if-itb/siasn-jf-backend/store"
+	"github.com/if-itb/siasn-jf-backend/store/object"
+	"github.com/if-itb/siasn-libs-backend/auth"
+	"github.com/if-itb/siasn-libs-backend/breaker"
+	"github.com/if-itb/siasn-libs-backend/config"
+	"github.com/if-itb/siasn-libs-backend/docx"
+	"github.com/if-itb/siasn-libs-backend/httputil"
+	"github.com/if-itb/siasn-libs-backend/logutil"
+	"github.com/if-itb/siasn-libs-backend/metricutil"
 	_ "github.com/jackc/pgx/v4/stdlib"
+	"os"
+	"os/signal"
+	"syscall"
+	"time"
 )
 
+//goland:noinspection GoUnusedGlobalVariable
 // version variable is left empty as it is populated in compile time by the linker.
 // To populate this variable during compile time, add -X flag to the linker using -ldflags go build command:
-//
-//	go build -ldflags "-X main.version=0.1.0"
-//
+//   go build -ldflags "-X main.version=0.1.0"
 // This way, during runtime, this variable will contain a string `0.1.0`. For more information about -X flag, visit
 // Go linker documentation https://golang.org/cmd/link/.
-//
-//goland:noinspection GoUnusedGlobalVariable
 var version string
 
 const (

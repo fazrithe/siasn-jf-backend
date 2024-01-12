@@ -12,11 +12,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fazrithe/siasn-jf-backend/ec"
-	. "github.com/fazrithe/siasn-jf-backend/errnum"
-	"github.com/fazrithe/siasn-jf-backend/httputil"
-	"github.com/fazrithe/siasn-jf-backend/store/models"
 	"github.com/google/uuid"
+	. "github.com/if-itb/siasn-jf-backend/errnum"
+	"github.com/if-itb/siasn-jf-backend/store/models"
+	"github.com/if-itb/siasn-libs-backend/ec"
+	"github.com/if-itb/siasn-libs-backend/httputil"
 )
 
 const (

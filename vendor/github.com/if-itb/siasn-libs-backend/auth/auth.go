@@ -14,11 +14,11 @@ import (
 	"strings"
 
 	"github.com/coreos/go-oidc/v3/oidc"
-	"github.com/fazrithe/siasn-jf-backend/ec"
-	"github.com/fazrithe/siasn-jf-backend/httputil"
-	"github.com/fazrithe/siasn-jf-backend/logutil"
-	"github.com/fazrithe/siasn-jf-backend/metricutil"
 	"github.com/google/uuid"
+	"github.com/if-itb/siasn-libs-backend/ec"
+	"github.com/if-itb/siasn-libs-backend/httputil"
+	"github.com/if-itb/siasn-libs-backend/logutil"
+	"github.com/if-itb/siasn-libs-backend/metricutil"
 	"golang.org/x/oauth2"
 	"gopkg.in/square/go-jose.v2/jwt"
 )

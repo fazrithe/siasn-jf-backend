@@ -5,17 +5,16 @@ import (
 	"database/sql"
 	"encoding/json"
 	"errors"
-	"net/http"
-
-	"github.com/fazrithe/siasn-jf-backend/breaker"
-	"github.com/fazrithe/siasn-jf-backend/docx"
-	"github.com/fazrithe/siasn-jf-backend/ec"
-	. "github.com/fazrithe/siasn-jf-backend/errnum"
-	"github.com/fazrithe/siasn-jf-backend/httputil"
-	"github.com/fazrithe/siasn-jf-backend/logutil"
-	"github.com/fazrithe/siasn-jf-backend/metricutil"
-	"github.com/fazrithe/siasn-jf-backend/store/object"
 	"github.com/gorilla/schema"
+	. "github.com/if-itb/siasn-jf-backend/errnum"
+	"github.com/if-itb/siasn-jf-backend/store/object"
+	"github.com/if-itb/siasn-libs-backend/breaker"
+	"github.com/if-itb/siasn-libs-backend/docx"
+	"github.com/if-itb/siasn-libs-backend/ec"
+	"github.com/if-itb/siasn-libs-backend/httputil"
+	"github.com/if-itb/siasn-libs-backend/logutil"
+	"github.com/if-itb/siasn-libs-backend/metricutil"
+	"net/http"
 )
 
 // Client is a db + HTTP client to access data from SI-X and store them in local PostgreSQL database.

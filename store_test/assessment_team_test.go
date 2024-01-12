@@ -3,19 +3,18 @@ package store_test
 import (
 	"bytes"
 	"encoding/json"
+	"github.com/DATA-DOG/go-sqlmock"
+	"github.com/google/uuid"
+	"github.com/if-itb/siasn-jf-backend/store/models"
+	"github.com/if-itb/siasn-libs-backend/auth"
+	"github.com/lib/pq"
+	. "github.com/onsi/gomega"
 	"math/rand"
 	"net/http"
 	"net/http/httptest"
 	"strconv"
 	"testing"
 	"time"
-
-	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/fazrithe/siasn-jf-backend/auth"
-	"github.com/fazrithe/siasn-jf-backend/store/models"
-	"github.com/google/uuid"
-	"github.com/lib/pq"
-	. "github.com/onsi/gomega"
 )
 
 func TestHandleAssessmentTeamAdmissionSubmit(t *testing.T) {
