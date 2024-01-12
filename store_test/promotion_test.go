@@ -4,18 +4,19 @@ import (
 	"bytes"
 	"database/sql"
 	"encoding/json"
-	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/google/uuid"
-	"github.com/if-itb/siasn-jf-backend/store/models"
-	"github.com/if-itb/siasn-libs-backend/auth"
-	"github.com/if-itb/siasn-libs-backend/search"
-	. "github.com/onsi/gomega"
 	"math/rand"
 	"net/http"
 	"net/http/httptest"
 	"strconv"
 	"testing"
 	"time"
+
+	"github.com/DATA-DOG/go-sqlmock"
+	"github.com/fazrithe/siasn-jf-backend/auth"
+	"github.com/fazrithe/siasn-jf-backend/search"
+	"github.com/fazrithe/siasn-jf-backend/store/models"
+	"github.com/google/uuid"
+	. "github.com/onsi/gomega"
 )
 
 func TestHandlePromotionAdmissionSubmit(t *testing.T) {

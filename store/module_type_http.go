@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/if-itb/siasn-jf-backend/store/models"
-	"github.com/if-itb/siasn-libs-backend/httputil"
+	"github.com/fazrithe/siasn-jf-backend/httputil"
+	"github.com/fazrithe/siasn-jf-backend/store/models"
 )
 
 func (c *Client) HandleModuleTypeSubmit(writer http.ResponseWriter, request *http.Request) {

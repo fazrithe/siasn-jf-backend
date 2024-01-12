@@ -2,10 +2,11 @@ package httputil
 
 import (
 	"context"
-	"github.com/if-itb/siasn-libs-backend/logutil"
 	"log"
 	"net/http"
 	"sync"
+
+	"github.com/fazrithe/siasn-jf-backend/logutil"
 )
 
 // The ServerManager controls HTTP and HTTPS servers that are deployed and listening to connections.

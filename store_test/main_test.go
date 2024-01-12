@@ -4,16 +4,17 @@ import (
 	"context"
 	"database/sql"
 	"encoding/json"
-	"github.com/DATA-DOG/go-sqlmock"
-	"github.com/if-itb/siasn-jf-backend/store"
-	"github.com/if-itb/siasn-jf-backend/store/object"
-	"github.com/if-itb/siasn-libs-backend/breaker"
-	"github.com/if-itb/siasn-libs-backend/logutil"
-	. "github.com/onsi/gomega"
 	"io"
 	"net/http"
 	"net/http/httptest"
 	"os"
+
+	"github.com/DATA-DOG/go-sqlmock"
+	"github.com/fazrithe/siasn-jf-backend/breaker"
+	"github.com/fazrithe/siasn-jf-backend/logutil"
+	"github.com/fazrithe/siasn-jf-backend/store"
+	"github.com/fazrithe/siasn-jf-backend/store/object"
+	. "github.com/onsi/gomega"
 )
 
 func CreateClient(db, profileDb, referenceDb *sql.DB, h http.Handler) (*httptest.Server, *store.Client) {
